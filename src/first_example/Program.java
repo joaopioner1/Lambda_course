@@ -14,11 +14,8 @@ public class Program {
 		list.add(new Product("Laptop", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Comparator<Product> comp = (p1, p2) -> {
-			return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
-		};
-		
-		list.sort(comp);
+		 //funcao anonima - arrow function
+		list.sort((p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase()));
 		
 		for (Product p : list) {
 			System.out.println(p);
