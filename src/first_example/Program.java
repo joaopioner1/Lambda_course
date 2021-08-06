@@ -14,13 +14,8 @@ public class Program {
 		list.add(new Product("Laptop", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Comparator<Product> comp = new Comparator<Product>() {
-
-			@Override
-			public int compare(Product p1, Product p2) {
-				return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
-			} //classe anonima
-			
+		Comparator<Product> comp = (p1, p2) -> {
+			return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
 		};
 		
 		list.sort(comp);
