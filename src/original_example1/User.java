@@ -29,5 +29,8 @@ public class User {
 		this.id = id;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Name: " + name + "\nID: " + id + "\n---------";
+	}
 }

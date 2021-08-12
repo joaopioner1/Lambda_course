@@ -18,13 +18,15 @@ public class Program {
 
 		String[] names_array = {"jorge","mateus","claudio","yago"};
 		Random random = new Random();
-		String name = names_array[random.nextInt(names_array.length)];
 		
-		for (int i = 0; i < names_array.length; i++) {
-			list.add(new User(name, i));
+		for (int i = 1; i <= names_array.length; i++) {
+			//if () {
+				String name = names_array[random.nextInt(names_array.length)];
+				list.add(new User(name, i));
+			//}
 		}
 		
-		
+		list.forEach( (user) -> { System.out.println(user); });
 	}
 
 }
