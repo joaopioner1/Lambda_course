@@ -20,13 +20,13 @@ public class Program {
 		Random random = new Random();
 		
 		for (int i = 1; i <= names_array.length; i++) {
-			//if () {
-				String name = names_array[random.nextInt(names_array.length)];
+			String name = names_array[random.nextInt(names_array.length)];
+			if (!list.contains(new User(name, i))) {	
 				list.add(new User(name, i));
-			//}
+			}
 		}
 		
-		list.forEach( (user) -> { System.out.println(user); });
+		list.forEach( (user) -> { System.out.println(user); });//lambda
 	}
 
 }
