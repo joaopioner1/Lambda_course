@@ -23,6 +23,7 @@ public class Program {
 			String name = names_array[random.nextInt(names_array.length)];
 			if (!list.contains(new User(name, i))) {	//names are reapiting, fix this
 				list.add(new User(name, i));
+			}
 		}
 		
 		list.forEach( (user) -> { System.out.println(user); });//lambda
