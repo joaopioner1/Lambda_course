@@ -17,11 +17,8 @@ public class Program {
 		list.removeIf(p -> p.getPrice() <= 50.00);
 		
 		double value = 10.00;
-		Consumer<Product> cons = p -> {
-			p.setPrice(p.getPrice() * value);
-		};
 		
-		list.forEach(cons);
+		list.forEach(p -> p.setPrice(p.getPrice() * value));
 		list.forEach(System.out::println);
 
 	}
