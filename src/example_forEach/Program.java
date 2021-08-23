@@ -2,6 +2,7 @@ package example_forEach;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Program {
 
@@ -15,7 +16,12 @@ public class Program {
 		
 		list.removeIf(p -> p.getPrice() <= 50.00);
 		
-		list.forEach(Product::staticPriceUpdate);
+		double value = 10.00;
+		Consumer<Product> cons = p -> {
+			p.setPrice(p.getPrice() * value);
+		};
+		
+		list.forEach(cons);
 		list.forEach(System.out::println);
 
 	}

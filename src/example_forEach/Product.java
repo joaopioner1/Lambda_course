@@ -43,6 +43,10 @@ public class Product {
 		p.setPrice(p.getPrice() * 10);
 	}
 	
+	public void nonStaticPriceUpdate() {
+		setPrice(getPrice() * 10);
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", id=" + id + ", price=" + price + "]";
