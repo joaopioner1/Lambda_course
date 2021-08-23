@@ -15,7 +15,7 @@ public class Program {
 		
 		list.removeIf(p -> p.getPrice() <= 50.00);
 		
-		//list.forEach(new PriceUpdate());
+		list.forEach(Product::staticPriceUpdate);
 		list.forEach(System.out::println);
 
 	}

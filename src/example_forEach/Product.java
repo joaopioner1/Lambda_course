@@ -39,6 +39,10 @@ public class Product {
 		this.price = price;
 	}
 
+	public static void staticPriceUpdate(Product p) {
+		p.setPrice(p.getPrice() * 10);
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", id=" + id + ", price=" + price + "]";
