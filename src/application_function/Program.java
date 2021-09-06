@@ -20,8 +20,7 @@ public class Program {
 		list.add(new Product("Headphone", 80.00));
 		list.add(new Product("Kindle", 300.00));
 		
-		Function<Product, String> func = p -> p.getName().toUpperCase();
-		List<String> names = list.stream().map(func).collect(Collectors.toList());
+		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		
 		names.forEach(System.out::println);
 	}
