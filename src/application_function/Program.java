@@ -6,6 +6,7 @@ import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import entities_function.ProductService;
 import first_example.Product;
 
 public class Program {
@@ -20,9 +21,12 @@ public class Program {
 		list.add(new Product("Headphone", 80.00));
 		list.add(new Product("Kindle", 300.00));
 		
-		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+		double sum = ProductService.filteredSum(list, p -> p.getName().charAt(0) == 'K');
 		
-		names.forEach(System.out::println);
+		System.out.println(String.format("%.2f", sum));
+		/*List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+		
+		names.forEach(System.out::println);*/
 	}
 
 }
