@@ -21,7 +21,10 @@ public class Program {
 		list.add(new Product("Headphone", 80.00));
 		list.add(new Product("Kindle", 300.00));
 		
+		
+		
 		double sum = ProductService.filteredSum(list, p -> p.getName().charAt(0) == 'K');
+		
 		
 		System.out.println(String.format("%.2f", sum));
 		/*List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());

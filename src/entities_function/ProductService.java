@@ -16,4 +16,12 @@ public class ProductService {
 		}
 		return sum;
 	}
+	
+	public static void remove(List<Product> list, Predicate<Product> lamb) {
+		for (Product p : list) {
+			if (lamb.test(p)) {
+				list.remove(p);
+			}
+		}
+	}
 }
