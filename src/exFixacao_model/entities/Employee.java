@@ -15,7 +15,7 @@ public class Employee {
 		this.salary = salary;
 	}
 	
-	public Employee(String name, Double salary, String email) {
+	public Employee(String name, String email, Double salary) {
 		this(name, salary);
 		this.email = email;
 	}
