@@ -12,8 +12,10 @@ public class Example {
 				new Person("Isa", 10),
 				new Person("Marquinhos", 4));
 		
-		listP.stream().filter(n -> n.age < 18).collect(Collectors.toList()).forEach(System.out::println);;
-		
+		listP.stream().filter(n -> n.age < 18)
+		.collect(Collectors.toList())
+		.forEach(System.out::println);
+	
 	}
 
 	static class Person {
